@@ -25,12 +25,14 @@ const UserCard=()=>{
                     <span> ajithvinu@gmail.com</span>
                 </h2>
             <Link>Update Password</Link>
-                    <p onClick={handleLogout} className="px-3 bg-[#92e3a9] py-2 w-[50%] text-center cursor-pointer">Logout</p>
+                    <p onClick={handleLogout} className="px-3 rounded-md bg-[#92e3a9] py-2 w-[50%] text-center cursor-pointer active:translate-y-1 transition-all">Logout</p>
             </div>
         </div>
-        <div className="p-3  border-4 flex items-center hover:opacity-[.5]">
-           <Link to="/img">  <h1 className="text-md text-xl font-semibold ">Image upload section</h1></Link>
+        <Link to="/img" className="border-4 flex items-center hover:opacity-[.5] cursor-pointer">
+        <div className="p-3  ">
+             <h1 className="text-md text-xl font-semibold ">Image upload section</h1>
         </div>
+        </Link>
         </Row>
     )
 }
