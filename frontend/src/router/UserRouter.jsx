@@ -5,7 +5,7 @@ import IMG from "../image"
 import UserLayout from "../Layout/UserLayout";
 import ProtectedRoute from "../Components/ProtectedRoute/ProtectedRoute"
 import ImgPage from "../Pages/Img";
-
+import ErrorPage from "../Components/ErrorPage/ErrorPage";
 
 const UserRouter=()=>{
 
@@ -18,7 +18,7 @@ const UserRouter=()=>{
             <Route path="/home" element={<ProtectedRoute><UserLayout/></ProtectedRoute>}/>
             <Route path="/img" element={<ProtectedRoute><ImgPage/></ProtectedRoute>}/>
             
-          
+          <Route path="*" element={<ErrorPage/>} />
         </Routes>
         </>
     )

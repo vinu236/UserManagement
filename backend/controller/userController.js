@@ -130,7 +130,7 @@ exports.getImg=async(req,res,next)=>{
    
 
     } catch (error) {
-        return next(err);
+        return next(error);
     }
 }
 

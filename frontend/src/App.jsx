@@ -3,9 +3,6 @@ import { Routes,Route } from "react-router-dom";
 import { Toaster } from 'react-hot-toast';
 
 
-
-
-console.log("hello world")
 const App=()=>{
 
   return(

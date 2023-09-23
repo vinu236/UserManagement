@@ -1,7 +1,12 @@
 import Row from "../Row/Row";
 import { Link } from "react-router-dom";
 import userAvatar from "../../assets/imgs/user-avatar.png";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
 const UserCard=()=>{
+
+    const userData=useSelector(store=>store.user)
+    console.log(userData)
 
     return(
         <Row className="bg-slate-300 p-10 flex-wrap">
