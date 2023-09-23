@@ -1,0 +1,36 @@
+.card_container{
+    position: relative;
+    
+
+}
+.card_container .card_1 , .card_container .card_2{
+    transition: all 1s linear;
+    perspective:150rem;
+    -moz-perspective:150rem;
+    -webkit-perspective:150rem;
+    position: absolute;
+    backface-visibility: hidden;
+    inset:0;
+ 
+
+
+}
+.card_container:hover .card_1{
+   transform: rotateY(180deg);
+  
+
+}
+.card_container .card_2{
+    transform: rotateY(180deg);
+}
+
+.card_container:hover .card_2{
+    transform: rotateY(0deg);
+}
+
+
+.btn{
+    padding:10px 30px;
+    border: 1px solid white;
+    border-radius:100px;
+}
