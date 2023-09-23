@@ -1,4 +1,4 @@
-import { Route ,Routes } from "react-router-dom";
+import { Route ,Routes,Navigate } from "react-router-dom";
 import Login from "../Components/Login/Login";
 import SignUp from "../Components/Signup/Signup";
 import IMG from "../image"
@@ -12,6 +12,7 @@ const UserRouter=()=>{
     return(
         <>
         <Routes>
+        <Route  index  element={<Navigate replace to={"/login"}/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/signup" element={<SignUp/>}/>
             <Route path="/home" element={<ProtectedRoute><UserLayout/></ProtectedRoute>}/>

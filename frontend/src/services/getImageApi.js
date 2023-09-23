@@ -1,7 +1,7 @@
 import instance from "./axios";
 import { setImgData } from "../Redux/imgSlice";
 let uid =JSON.parse(localStorage.getItem('user'))
-    uid=uid.uid;
+    uid=uid?.uid;
 
     
     const getDataApi=async(dispatch)=>{
