@@ -11,7 +11,7 @@ const LoginApi=async (formValues,setIsLoading,setFormValues,initialFormValues,se
         const {data,status}=await instance.post('/login',formValues);
         if(status===200){
            localStorage.setItem('user',JSON.stringify(data))
-           dispatch(setUserData(data));
+           dispatch(setUserData("asdasd"));
         navigate("/home", { replace: true })
         }
     } catch (error) {
