@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 const UserCard=()=>{
 
-    const userData=useSelector(store=>store);
+    const userData=useSelector(store=>store.user);
     const navigate=useNavigate()
     console.log(userData)
 
@@ -22,13 +22,13 @@ const UserCard=()=>{
             <div className="flex flex-col gap-4">
                 <h2>
                     <span>Email :</span>
-                    <span> ajithvinu@gmail.com</span>
+                    <span> {userData.email}</span>
                 </h2>
             <Link>Update Password</Link>
                     <p onClick={handleLogout} className="px-3 rounded-md bg-[#92e3a9] py-2 w-[50%] text-center cursor-pointer active:translate-y-1 transition-all">Logout</p>
             </div>
         </div>
-        <Link to="/img" className="border-4 flex items-center hover:opacity-[.5] cursor-pointer">
+        <Link to="/img" className="border-4 flex items-center hover:opacity-[.6] transition-all hover:bg-[#dff7e5] cursor-pointer">
         <div className="p-3  ">
              <h1 className="text-md text-xl font-semibold ">Image upload section</h1>
         </div>
