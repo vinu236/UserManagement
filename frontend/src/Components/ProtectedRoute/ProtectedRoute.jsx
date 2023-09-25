@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 
 const ProtectedRoute=({children})=>{
     const navigate=useNavigate()
-
     const{isAuth}=useUser()
 
     useEffect(()=>{
