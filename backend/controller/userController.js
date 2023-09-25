@@ -202,3 +202,42 @@ exports.deleteImgApi =async(req,res,next)=>{
             return next(error)
     }
 }
+
+exports.updateController=async(req,res,next)=>{
+    try {
+            // console.log(req.params);
+            const {uid}=req.params;
+            const {oldPassword , newPassword}=req.body;
+            console.log("old password is =>>>>>>>>>>>>>>>",oldPassword);
+            console.log("NEW PASS",newPassword)
+
+        const userCheck =await User.findOne({_id:uid})
+            
+        if(!userCheck){
+            const err= new Error("Not found");
+            err.status=404;
+            return next(err)
+        }
+        const matchPassword=await bcrypt.compare(oldPassword,userCheck.password);
+        console.log(matchPassword)
+        if(!matchPassword){
+            const err=new Error('Invalid Password');
+            err.status=404;
+            return next(err);
+        }
+
+
+        const hashPassword=await bcrypt.hash(newPassword,10);
+
+        console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+
+                // console.log("=================")
+
+                const updatePassword=await User.updateOne({_id:uid},{$set:{password:hashPassword}});
+                console.log(updatePassword);
+                res.status(200).json({message:"Successfully updated"})
+    } catch (error) {
+
+        return next(error)
+    }
+}

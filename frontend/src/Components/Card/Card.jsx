@@ -4,7 +4,6 @@
 
 
   const Card = ({imgData}) => {
-    console.log(imgData)
 
     return (
       <Row className={""}>

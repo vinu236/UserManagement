@@ -15,6 +15,8 @@ router.get('/img/:uid',userController.getImg)
 // router.get('/single/img/:uid/:img_id',userController.getSingleImg)   
 router.put('/img/:uid',upload.array("img"),userController.putImg);
 router.delete('/img/:uid/:img_id',userController.deleteImgApi);
+console.log("hello")
+router.post('/updatePassword/:uid',userController.updateController)
 
 
-module.exports=router
+module.exports=router   
