@@ -16,8 +16,8 @@ const UserCard = () => {
   };
 
   return (
-    <Row className="bg-slate-300 p-10 flex-wrap">
-      <div className="p-3  border-4 flex gap-6 items-center">
+    <Row className="bg-[#dff7e5] shadow-2xl p-10 flex-wrap">
+      <div className="p-3 border-[#92e3a9] border-4 flex gap-6 items-center">
         <img src={userAvatar} alt="" className="w-32" />
         <div className="flex flex-col gap-4">
           <h2>
@@ -35,7 +35,7 @@ const UserCard = () => {
       </div>
       <Link
         to="/img"
-        className="border-4 flex items-center hover:opacity-[.6] transition-all hover:bg-[#dff7e5] cursor-pointer"
+        className="border-[#92e3a9] border-4 flex items-center  hover:opacity-[.6] transition-all hover:bg-[#dff7e5] cursor-pointer"
       >
         <div className="p-3  ">
           <h1 className="text-md text-xl font-semibold ">
