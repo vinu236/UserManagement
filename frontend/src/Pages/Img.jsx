@@ -4,7 +4,6 @@ import { DragDropContext } from "react-beautiful-dnd";
 
 const ImgPage=()=>{
     function handleOnDragEnd(result) {
-        alert("d")
         console.log(result)
     }
 

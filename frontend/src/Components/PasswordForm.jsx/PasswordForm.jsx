@@ -1,6 +1,7 @@
 import { useState } from "react";
 import instance from "../../services/axios";
 import { useNavigate } from "react-router-dom";
+import {updatePasswordValidation} from "../../utils/validation"
 import toast from "react-hot-toast";
 
 const PasswordForm = ({onClickModal}) => {
@@ -12,6 +13,9 @@ const PasswordForm = ({onClickModal}) => {
 
   const  handleSubmit=()=>{
 
+
+   const validate = updatePasswordValidation(formValues.oldPassword,formValues.newPassword);
+    if(validate !== null) return toast.success(validate)
         submitForm(formValues)
     }
 

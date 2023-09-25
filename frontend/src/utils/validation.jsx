@@ -20,3 +20,11 @@ export const signUpValidation=(password,conFirmPassword)=>{
     return null;
 
 }
+
+export const updatePasswordValidation=(currentP,newP)=>{
+ 
+        if(currentP==="" || newP==="") return "Text field cannot be Empty";
+            return null;
+   
+        
+}
