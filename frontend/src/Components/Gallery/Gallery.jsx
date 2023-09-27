@@ -22,7 +22,7 @@ const Gallery = () => {
 
   if (data.length === 0)
     return (
-      <div className=" bg-[#dff7e5] h-[90vh] flex items-center justify-center font-mono text-3xl rounded-xl">
+      <div className=" bg-[#dff7e5]  h-[90vh] flex items-center justify-center font-mono text-3xl rounded-xl">
         <p className="font-extrabold text-[#92e3a9] tracking-[12px]">No data ☹️!</p>
       </div>
     );
@@ -30,7 +30,7 @@ const Gallery = () => {
     <Droppable droppableId="ImageCard">
       {(provided) => (
         <div
-          className="flex justify-evenly"
+          className="flex flex-col bg-gray-400 gap-4"
           {...provided.droppableProps}
           ref={provided.innerRef}
         >
@@ -42,6 +42,7 @@ const Gallery = () => {
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
                     ref={provided.innerRef}
+                  
                   >
                     <Card imgData={img} />
                   </div>

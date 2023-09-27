@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import userSlice from "../Redux/userSlice";
 import imgSlice from "./imgSlice";
+import DragDropSlice from "./DragDropSlice";
 
 
 
@@ -8,7 +9,8 @@ import imgSlice from "./imgSlice";
 const store=configureStore({
     reducer:{
         user:userSlice,
-        Image:imgSlice
+        Image:imgSlice,
+        DragDrop:DragDropSlice
         
     }
 })

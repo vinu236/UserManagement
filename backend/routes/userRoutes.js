@@ -17,6 +17,6 @@ router.put('/img/:uid',upload.array("img"),userController.putImg);
 router.delete('/img/:uid/:img_id',userController.deleteImgApi);
 console.log("hello")
 router.post('/updatePassword/:uid',userController.updateController)
-
+router.put('/img/reorder/:uid',userController.reOrderController)
 
 module.exports=router   

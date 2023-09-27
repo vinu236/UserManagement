@@ -3,13 +3,15 @@ import "./Menu.css";
 import { IoMdAddCircle } from "react-icons/io";
 import Modal from "../Modal/Modal";
 import AddImages from "../AddImages/AddImages";
+import { useSelector } from "react-redux";
 const Menu = () => {
   const [shows, setShow] = useState(false);
-
+  const toggle=useSelector(store=>store.DragDrop)
   const handleClick = () => {
     setShow(!shows);
   };
 
+    if(toggle) return ;
   return (
     <nav className={`${shows && "active"}`}>
       <Modal>

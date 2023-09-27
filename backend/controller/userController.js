@@ -241,3 +241,15 @@ exports.updateController=async(req,res,next)=>{
         return next(error)
     }
 }
+
+exports.reOrderController=async(req,res,next)=>{
+    try {
+        const {uid}= req.params;
+        const reArrangedImage=req.body
+        console.log("uid is =>>>>>>>",uid)
+        console.log(req.body);
+        const 
+    } catch (error) {
+        return next(error)
+    }
+}
