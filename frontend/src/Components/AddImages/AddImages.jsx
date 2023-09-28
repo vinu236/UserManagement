@@ -88,7 +88,7 @@ let uid =JSON.parse(localStorage.getItem('user'))
     if(data.length==0) return <ImgInput handleData={handleAddImage}/>
     return( 
        <form className=" flex flex-col gap-3 bg-text-[#f9fafb]" onSubmit={handleSubmit} encType="multipart/form-data">
-        <div className="border-2 p-6 min-h-[500px] max-h-[500px] min-w-[800px]  overflow-y-auto flex flex-wrap gap-20 ">
+        <div className="border-2 p-6 min-h-[500px] max-h-[500px] min-w-[800px]  overflow-y-auto flex flex-wrap gap-20 bg-[#dff7e5] rounded-md">
              {data.map((img,index)=><DisplayImage imgFileData={img} handleTextUpdate={handleTextUpdate} key={index} index={index}/>)}
         </div>
             <div className="flex justify-end gap-4">

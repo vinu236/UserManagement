@@ -30,7 +30,7 @@ const Gallery = () => {
     <Droppable droppableId="ImageCard">
       {(provided) => (
         <div
-          className="flex flex-col bg-gray-400 gap-4"
+          className="flex flex-col bg-[#92e3a9] gap-4 w-[50%] p-7 rounded-md max-h-[80vh] overflow-y-auto shadow-lg"
           {...provided.droppableProps}
           ref={provided.innerRef}
         >
@@ -42,9 +42,9 @@ const Gallery = () => {
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
                     ref={provided.innerRef}
-                  
+                  className="bg-[#dff7e5] rounded-md"
                   >
-                    <Card imgData={img} />
+                    <Card imgData={img} index={index}/>
                   </div>
                 )}
               </Draggable>

@@ -4,7 +4,7 @@ const ConfirmDelete=({resourceName,onClickModal,onClick,Loading})=>{
 
 
     return(
-        <div className="w-[40rem] flex flex-col gap-4">
+        <div className="w-[40rem] flex flex-col gap-4 border-[1px] bg-[#dff7e5]  rounded-md py-4 px-3">
         <h1 className="text-xl font-medium">Delete {resourceName}</h1>
         <p>Are you sure you want to delete this {resourceName} permanently? This action cannot be undone. </p>
         <div className="flex justify-end gap-6">

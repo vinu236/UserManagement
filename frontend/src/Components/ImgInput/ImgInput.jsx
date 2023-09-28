@@ -20,6 +20,7 @@ const ImgInput=({handleData})=>{
           min-w-[500px] border-[1px] 
           flex flex-col items-center 
           justify-center cursor-pointer 
+          bg-[#dff7e5] rounded-lg
           relative ${activeDrag && "opacity-[0.5] bg-blue-100"}`} ref={ref} 
           onDragEnter={onDragEnter}
           onDragLeave={onDragLeave}

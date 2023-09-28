@@ -85,21 +85,21 @@ const initialFormValues={imgPath:"",title:""}
 
 
   return (
-    <div className="p-3 min-w-[400px] min-h-[300px] border-[1px] border-[#bbb] bg-[#f9fafb]">
+    <div className="p-3 min-w-[400px] min-h-[300px] border-[1px] border-[#bbb] bg-[#dff7e5] ">
       <form onSubmit={onSubmit}>
         <div className="flex flex-col gap-9 ">
         <div className="flex flex-row-reverse justify-around items-center"> 
           <InputField label={"Heading"} value={formValues.title} onChange={handleChange} name={"title"} labelClass={"text-xl font-mono"} 
-          className={"border-[2px] px-3 py-2 rounded-sm text-[16px] font-mono"}
+          className={"border-none outline-2 px-3 py-2 rounded-sm text-[16px] font-mono focus:outline-[#92e3a9]"}
           disabled={isLoading}
           />
         </div> 
         <div className="flex justify-start ml-[20px] gap-12 items-center text-xl font-mono mb-16">
-          <label htmlFor="" className="">Label</label>
+          <label htmlFor="" className="">Image</label>
           <img
             src={`${newImg ? newImg : formValues.imgPath}`}
             alt=""
-            className="min-w-[100px] max-w-[120px] min-h-[100px] max-h-[150px] ml-4"
+            className="min-w-[100px] max-w-[120px] min-h-[100px] max-h-[150px] ml-4 border-4 border-[#92e3a9] ]"
             onClick={handleClick}
           />
           <input
@@ -113,8 +113,8 @@ const initialFormValues={imgPath:"",title:""}
         </div>
         </div>
         <div className="flex justify-end gap-4">
-          <button className="px-5 py-2 border-2" disabled={isLoading}>{isLoading ? <SpinnerMini/> : "Submit"}</button>
-          <button className="px-5 py-2 border-2" disabled={isLoading} onClick={onClickModal}>Cancel</button>
+          <button className="px-5 py-2 border-none rounded-md bg-[#92e3a9]" disabled={isLoading}>{isLoading ? <SpinnerMini/> : "Submit"}</button>
+          <button className="px-5 py-2 border-none rounded-b-md bg-[#92e3a9]" disabled={isLoading} onClick={onClickModal}>Cancel</button>
         </div>
       </form>
     </div>

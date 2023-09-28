@@ -46,10 +46,10 @@ const dispatch=useDispatch()
 
     if(!toggle) return ;
     return (
-        <div className="fixed top-[87%] bg-[#dff7e5] left-0 w-[100%] bottom-0 flex flex-col justify-center items-end">
-            <div className="flex gap-10 mr-7 ">
-                <button className="px-4 py-2  bg-[#92e3a9] text-center cursor-pointer active:translate-y-1 transition-all rounded-sm" onClick={handleSubmit} disabled={isLoading}>{isLoading ? <SpinnerMini/> : "Submit"}</button>
-                <button className="px-4 py-2  bg-[#92e3a9] text-center cursor-pointer active:translate-y-1 transition-all rounded-sm" onClick={handleClickCancel} disabled={isLoading}>Cancel</button>
+        <div className="fixed top-[87%] bg-[#92e3a9] shadow-2xl left-0 w-[100%] bottom-0 flex flex-col justify-center items-end">
+            <div className="flex gap-10 mr-7">
+                <button className="px-4 py-2   bg-[#dff7e5]  text-center cursor-pointer active:translate-y-1 transition-all rounded-md" onClick={handleSubmit} disabled={isLoading}>{isLoading ? <SpinnerMini/> : "Submit"}</button>
+                <button className="px-4 py-2   bg-[#dff7e5]  text-center cursor-pointer active:translate-y-1 transition-all rounded-md" onClick={handleClickCancel} disabled={isLoading}>Cancel</button>
             </div>
         </div>
     );

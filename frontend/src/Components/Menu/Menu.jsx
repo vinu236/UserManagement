@@ -16,14 +16,14 @@ const Menu = () => {
     <nav className={`${shows && "active"}`}>
       <Modal>
         <Modal.Open open={"img"}>
-          <button className="_btn">Add Item</button>
+          <button className="_btn bg-[#92e3a9]">Add Item</button>
         </Modal.Open>
         <Modal.Window show={"img"}>
           <AddImages/>
         </Modal.Window>
       </Modal>
 
-      <button onClick={handleClick}>
+      <button onClick={handleClick} className="text-[#92e3a9]">
         <IoMdAddCircle className="plus_icon rotate" size={85} />
       </button>
     </nav>
