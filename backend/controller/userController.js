@@ -248,7 +248,20 @@ exports.reOrderController=async(req,res,next)=>{
         const reArrangedImage=req.body
         console.log("uid is =>>>>>>>",uid)
         console.log(req.body);
-        const 
+        
+        const userCheck =await User.findOne({_id:uid})
+            
+        if(!userCheck){
+            const err= new Error("Not found");
+            err.status=404;
+            return next(err)
+        }
+
+
+        const response=await User.updateOne({_id:uid},{$set:{images:reArrangedImage.map((img)=>img)}});
+
+        console.log(response)
+        res.status(200).json({message:"Successfully updated"})
     } catch (error) {
         return next(error)
     }
